@@ -54,8 +54,8 @@ export class MainComponent implements OnInit {
     this.stepValue += step;
   }
 
-  subscribe(email: string): void {
-    this.emailes.push(email);
+  subscribe(): void {
+    this.emailes.push(this.emailControl.value);
     this.isSubscribed = true;
   }
 }

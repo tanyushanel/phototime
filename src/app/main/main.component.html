@@ -93,7 +93,7 @@
     <div class="art-content center">
         <h3> Subscribe to us community </h3>
 
-        <form (ngSubmit)="subscribe($event)"
+        <form (ngSubmit)="subscribe()"
               [formGroup]="form">
             <input type="email"
                    placeholder="Enter email"
@@ -104,10 +104,12 @@
             <button class="btn"> <span class="material-icons"> done
                 </span>
             </button>
+
+            <p class="desc center"
+               *ngIf="isSubscribed">You are succsessfully subscribed!</p>
         </form>
 
-        <p class="desc center"
-           *ngIf="isSubscribed">You are succsessfully subscribed!</p>
+
 
     </div>
 </article>
