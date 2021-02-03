@@ -24,8 +24,11 @@ footer {
 .nav-item {
   text-transform: uppercase;
   display: inline-block;
-  margin: 2rem 0;
   letter-spacing: 1.5px;
+  cursor: pointer;
+}
+.nav-item:hover {
+  transform: scale(1.1);
 }
 
 .nav-item:not(:last-child)::after {
@@ -37,11 +40,15 @@ footer {
 .desc {
   font-size: 0.8em;
   letter-spacing: 1.3px;
-  line-height: 1rem;
+  line-height: 2rem;
 }
 
 .right {
   position: absolute;
-  top: 1.25rem;
+  top: 2rem;
   right: 5.188rem;
+}
+
+footer {
+  padding: 1.5rem 0;
 }
