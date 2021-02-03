@@ -1,4 +1,10 @@
-header,
+header {
+  position: fixed;
+  z-index: 3;
+  background: grey;
+  width: 100%;
+}
+
 footer {
   position: relative;
 }
@@ -14,7 +20,9 @@ footer {
   position: absolute;
   width: 100%;
   z-index: 2;
-  top: 1.5rem;
+  color: #ffffff;
+  background: grey;
+  opacity: 0.6;
 }
 
 .center {
@@ -27,6 +35,7 @@ footer {
   letter-spacing: 1.5px;
   cursor: pointer;
 }
+
 .nav-item:hover {
   transform: scale(1.1);
 }

@@ -44,14 +44,18 @@
             velit officiis explicabo <br> possimus aperiam quidem?</p>
         <button class="btn"> Learn more </button>
         <div class="calendar">
-            <span> 01 </span> <span>/</span> <span> 05 </span>
+            <span> {{ stepValue }} </span>
+            <span>/</span>
+            <span> {{ count }} </span>
             <div>
                 <span class="prev material-icons"
-                      (click)="switchCalendar($event)">
+                      (click)="go(-1)"
+                      [class.hidden]="stepValue === start">
                     keyboard_arrow_left
                 </span>
                 <span class="next material-icons"
-                      (click)="switchCalendar($event)">
+                      (click)="go(1)"
+                      [class.hidden]="stepValue === count">
                     keyboard_arrow_right
                 </span>
             </div>
@@ -69,20 +73,25 @@
     <div class="img-container">
         <div>
             <span class="prev material-icons"
-                  (click)="switchCalendar($event)">
+                  (click)="goToImg(-1)">
                 keyboard_arrow_left
             </span>
             <span class="next material-icons"
-                  (click)="switchCalendar($event)">
+                  (click)="goToImg(0)">
                 keyboard_arrow_right
             </span>
         </div>
-        <img class="slider-img">
-        <img class="slider-img">
+        <img class="slider-img"
+             *ngFor="let img of images"
+             src="{{ img }}">
+
     </div>
 </article>
-<article class="fifth ">
-    <div class="art-content center">
+<article class="
+             fifth ">
+    <div class="
+             art-content
+             center">
         <h3> Subscribe to us community </h3>
         <div>
             <input type="email"
@@ -104,7 +113,7 @@
             consequuntur minima nesciunt illum impedit, ad possimus cumque suscipit et nostrum laborum inventore
             eligendi,
             culpa nihil! </p>
-        <button class="btn"> Apple Store <img src="../../assets/fa-apple.png"></button>
-        <button class="btn"> Play Store <img src="../../assets/fa-android.png"></button>
+        <a class="btn"> Apple Store <img src="../../assets/fa-apple.png"></a>
+        <a class="btn"> Play Store <img src="../../assets/fa-android.png"></a>
     </div>
 </article>

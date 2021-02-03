@@ -69,6 +69,7 @@ h3 {
 
 .btn {
   font-family: "Gotham Rounded", sans-serif;
+  display: inline-block;
   padding: 0.5rem;
   text-transform: uppercase;
   border-radius: 3px;
@@ -150,8 +151,7 @@ h3 {
 
 .sixth .btn {
   position: relative;
-  margin: 1rem;
-  padding-right: 3rem;
+  margin: 2rem;
   background: #1abc9c;
   border-right: 3rem solid #16a085;
 
@@ -161,6 +161,7 @@ h3 {
     top: 0.5rem;
   }
 }
+
 .fifth {
   & .btn {
     display: inline-block;
@@ -177,4 +178,16 @@ h3 {
     outline: none;
     padding: 0 0.5rem;
   }
+}
+
+.slider-img {
+  margin-left: 1rem;
+
+  &:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+.hidden {
+  visibility: hidden;
 }
