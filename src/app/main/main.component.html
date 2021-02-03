@@ -43,7 +43,7 @@
             quos reiciendis voluptas esse tempore <br>aspernatur qui
             velit officiis explicabo <br> possimus aperiam quidem?</p>
         <button class="btn"> Learn more </button>
-        <div class="calendar">
+        <div>
             <span> {{ stepValue }} </span>
             <span>/</span>
             <span> {{ count }} </span>
@@ -59,6 +59,8 @@
                     keyboard_arrow_right
                 </span>
             </div>
+
+
 
         </div>
     </div>
@@ -87,21 +89,26 @@
 
     </div>
 </article>
-<article class="
-             fifth ">
-    <div class="
-             art-content
-             center">
+<article class="fifth ">
+    <div class="art-content center">
         <h3> Subscribe to us community </h3>
-        <div>
+
+        <form (ngSubmit)="subscribe($event)"
+              [formGroup]="form">
             <input type="email"
                    placeholder="Enter email"
                    onblur="this.placeholder='Enter email'"
-                   onfocus="this.placeholder = ''">
+                   onfocus="this.placeholder = ''"
+                   formControlName="email"
+                   required>
             <button class="btn"> <span class="material-icons"> done
                 </span>
             </button>
-        </div>
+        </form>
+
+        <p class="desc center"
+           *ngIf="isSubscribed">You are succsessfully subscribed!</p>
+
     </div>
 </article>
 <article class="sixth"

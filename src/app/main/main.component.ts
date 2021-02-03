@@ -1,5 +1,11 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder,
+  Form,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-main',
@@ -20,20 +26,36 @@ export class MainComponent implements OnInit {
 
   img: string;
 
+  form: FormGroup;
+
+  emailControl: FormControl;
+  isSubscribed: boolean = false;
+
+  emailes: string[] = [];
+
   constructor() {}
 
   ngOnInit(): void {
     this.img = this.images[0];
+
+    this.emailControl = new FormControl('', Validators.required);
+    this.form = new FormGroup({
+      email: this.emailControl,
+    });
   }
 
   goToImg(dir: number): void {
     let arr = this.images;
-
     this.img = this.images.splice(dir, 1).join(''); // deleted
     dir ? arr.splice(0, 0, this.img) : arr.splice(arr.length, 0, this.img);
   }
 
-  go(step): void {
+  go(step: number): void {
     this.stepValue += step;
+  }
+
+  subscribe(email: string): void {
+    this.emailes.push(email);
+    this.isSubscribed = true;
   }
 }
