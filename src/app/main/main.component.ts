@@ -38,7 +38,11 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.img = this.images[0];
 
-    this.emailControl = new FormControl('', Validators.required);
+    this.emailControl = new FormControl('', [
+      Validators.required,
+      Validators.email,
+    ]);
+
     this.form = new FormGroup({
       email: this.emailControl,
     });

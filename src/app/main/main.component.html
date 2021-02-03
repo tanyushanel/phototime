@@ -99,14 +99,25 @@
                    placeholder="Enter email"
                    onblur="this.placeholder='Enter email'"
                    onfocus="this.placeholder = ''"
+                   name="email"
                    formControlName="email"
                    required>
-            <button class="btn"> <span class="material-icons"> done
+            <button class="btn"> <span class="
+                    material-icons"> done
                 </span>
             </button>
 
             <p class="desc center"
-               *ngIf="isSubscribed">You are succsessfully subscribed!</p>
+               *ngIf="!form.invalid && form.touched ; then ok ">
+            </p>
+            <ng-template #ok>
+                <p>You are succsessfully subscribed!</p>
+            </ng-template>
+
+
+
+
+
         </form>
 
 
