@@ -1,3 +1,8 @@
+header,
+footer {
+  position: relative;
+}
+
 .invisible {
   visibility: hidden;
   width: 0;
@@ -7,4 +12,36 @@
 
 .navbar {
   position: absolute;
+  width: 100%;
+  z-index: 2;
+  top: 1.5rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.nav-item {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 2rem 0;
+  letter-spacing: 1.5px;
+}
+
+.nav-item:not(:last-child)::after {
+  content: "|";
+  color: #16a085;
+  margin: 0 1rem;
+}
+
+.desc {
+  font-size: 0.8em;
+  letter-spacing: 1.3px;
+  line-height: 1rem;
+}
+
+.right {
+  position: absolute;
+  top: 1.25rem;
+  right: 5.188rem;
 }

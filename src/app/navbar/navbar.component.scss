@@ -1,0 +1,28 @@
+.header {
+  color: #ffffff;
+  text-align: center;
+}
+
+.nav-item {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0.75rem 3rem;
+  vertical-align: middle;
+
+  line-height: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  & img {
+    margin-top: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}

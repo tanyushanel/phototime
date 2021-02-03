@@ -1,3 +1,152 @@
-.first {
-  background: url("../../assets/Livello\ bg1.png") no-repeat;
+article {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 6.25rem 7rem;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &:nth-child(2n) {
+    background: #f5f6f7;
+  }
+
+  & .right {
+    position: absolute;
+    top: 6.25rem;
+    right: 5.188rem;
+  }
+
+  & .left {
+    position: absolute;
+    top: 6.25rem;
+    left: 2rem;
+  }
+
+  &.first {
+    background: url("../../assets/Livello-bg1.png") no-repeat;
+    height: 46.563rem;
+  }
+
+  &.second,
+  &.third {
+    height: 30.875rem;
+    min-height: 30.875rem;
+  }
+
+  &.first .art-content,
+  &.fifth .art-content {
+    flex: 1 1 100%;
+    color: #ffffff;
+    padding-top: 12.75rem;
+    line-height: 2.1rem;
+    letter-spacing: 2.7px;
+  }
+
+  &.first .art-content {
+  }
+
+  &.fourth .art-content {
+    flex: 2 1 100px;
+  }
+
+  &.fifth {
+    background: url("../../assets/Livello-bg2.png") no-repeat;
+    height: 49.375rem;
+  }
+}
+
+h2 {
+  letter-spacing: 6px;
+  font-size: 2.4em;
+}
+
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #16a085;
+  letter-spacing: 2.5px;
+}
+
+.btn {
+  font-family: "Gotham Rounded", sans-serif;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background-color: #16a085;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  letter-spacing: 2px;
+  font-size: 0.7em;
+  cursor: pointer;
+  margin: 2rem 0;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.social {
+  text-align: center;
+  margin-top: 14rem;
+
+  & .soc {
+    display: inline-block;
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
+
+  & .soc:hover {
+    transform: scale(1.1);
+  }
+}
+
+.img-content {
+  position: absolute;
+}
+
+.art-content {
+  &.half-width {
+    width: 26.75rem;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.img-container {
+  text-align: right;
+}
+
+.slider-img {
+  display: inline-block;
+  width: 23.125rem;
+  height: 15.25rem;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+  transform: scale(1.2);
+}
+
+.desc {
+  font-size: 0.8em;
+  margin: 0 0.5rem;
+  font-weight: 300;
+  letter-spacing: 1.3px;
+  line-height: 1rem;
 }

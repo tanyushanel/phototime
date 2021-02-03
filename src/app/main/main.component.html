@@ -1,67 +1,104 @@
-<article class="first">
-    <h2> Your life , a photo </h2>
-    <p class="desc"> print your life in a simple photo </p>
-    <button class="btn"> Get started </button>
-    <ul class="social">
-        <li class="soc twt"></li>
-        <li class="soc flickr"></li>
-        <li class="soc drbl"></li>
-    </ul>
-</article>
-
-<article class="second">
-    <h3> Rappresent your life with a simple photo </h3>
-    <p class="desc"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique ea minus pariatur reprehenderit
-        commodi, dolores molestias aliquam tempora debitis quos reiciendis voluptas esse tempore aspernatur qui velit
-        officiis explicabo possimus aperiam quidem? Labore deserunt, <span>nesciunt possimus velit </span> impedit
-        officiis quis debitis iure tempore commodi delectus tempora distinctio assumenda earum a dolorem suscipit alias
-        voluptatem dolores, culpa repellendus. </p>
-    <button class="btn"> Get started </button>
+<article class="first"
+         id="home">
+    <div class="art-content center">
+        <h2> Your life , a photo </h2>
+        <p class="desc"> print your life in a simple photo </p>
+        <button class="btn"> Get started </button>
+        <ul class="social center">
+            <li class="soc twt"> <img src="../../assets/fa-twitter.png"> </li>
+            <li class="soc flickr"> <img src="../../assets/fa-flickr.png"> </li>
+            <li class="soc drbl"> <img src="../../assets/fa-dribbble.png"> </li>
+        </ul>
+    </div>
 
 </article>
-<article class="third">
-    <h3> Design </h3>
-    <p class="desc"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique ea minus pariatur reprehenderit
-        commodi, dolores molestias aliquam tempora debitis quos reiciendis voluptas esse tempore aspernatur qui velit
-        officiis explicabo possimus aperiam quidem? Labore deserunt, <span>nesciunt possimus velit </span> impedit
-        officiis quis debitis iure tempore commodi delectus tempora distinctio assumenda earum a dolorem suscipit alias
-        voluptatem dolores, culpa repellendus. </p>
-    <button class="btn"> Learn more </button>
-    <div class="calendar">
-        <span> 01 </span> <span>/</span> <span> 05 </span>
 
+<article class="second"
+         id="photoapp">
+    <div class="art-content half-width">
+        <h3> Rappresent your life with a simple photo </h3>
+        <p class="desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Similique ea minus pariatur reprehenderit<br>
+            commodi, dolores <strong> enim et minim </strong> debitis <br>
+            quos reiciendis voluptas esse tempore <br>aspernatur qui
+            velit officiis explicabo <br> possimus aperiam quidem?
+        </p>
+        <button class="btn"> Get started </button>
+
+    </div>
+    <img class="art-img right"
+         src="../../assets/HandPhone.png">
+
+</article>
+<article class="third"
+         id="design">
+    <img class="art-img left"
+         src="../../assets/Flat-iPhone-Mock.png">
+    <div class="art-content half-width right">
+        <h3> Design </h3>
+        <p class="desc"> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Similique ea minus pariatur reprehenderit<br>
+            commodi, dolores <strong> enim et minim </strong> debitis <br>
+            quos reiciendis voluptas esse tempore <br>aspernatur qui
+            velit officiis explicabo <br> possimus aperiam quidem?</p>
+        <button class="btn"> Learn more </button>
+        <div class="calendar">
+            <span> 01 </span> <span>/</span> <span> 05 </span>
+            <div>
+                <span class="prev material-icons"
+                      (click)="switchCalendar($event)">
+                    keyboard_arrow_left
+                </span>
+                <span class="next material-icons"
+                      (click)="switchCalendar($event)">
+                    keyboard_arrow_right
+                </span>
+            </div>
+
+        </div>
     </div>
 </article>
 <article class="fourth">
-    <img src="../../assets/Livello logo green.png">
-    <h3> Our Community </h3>
-    <p class="desc"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <div class="art-content center">
+        <img src="../../assets/Livello-logo-green.png">
+        <h3> Our Community </h3>
+        <p class="desc"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+    </div>
     <div class="img-container">
         <div>
-            <span class="btn prev material-icons"
+            <span class="prev material-icons"
                   (click)="switchCalendar($event)">
                 keyboard_arrow_left
             </span>
-            <span class="btn next material-icons"
+            <span class="next material-icons"
                   (click)="switchCalendar($event)">
                 keyboard_arrow_right
             </span>
         </div>
-        <img>
-        <img>
+        <img class="slider-img">
+        <img class="slider-img">
     </div>
 </article>
-<article class="fifth">
-    <h3> Subscribe to us community </h3>
-    <input type="email"> <button class="btn"> <span class="material-icons">
-            done
-        </span> </button>
+<article class="fifth ">
+    <div class="art-content center">
+        <h3> Subscribe to us community </h3>
+        <input type="email"> <button class="btn"> <span class="material-icons">
+                done
+            </span> </button>
+    </div>
 </article>
-<article class="sixth">
-    <h3> Download it </h3>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus rerum assumenda facere repellat quod,
-        consequuntur minima nesciunt illum impedit, ad possimus cumque suscipit et nostrum laborum inventore eligendi,
-        culpa nihil! </p>
-    <button class="btn"> Apple Store </button> <img src="../../assets/fa-apple.png">
-    <button class="btn"> Play Store </button> <img src="../../assets/fa-android.png">
+<article class="sixth"
+         id="download">
+    <div class="art-content center">
+        <h3> Download it </h3>
+        <p class="desc uppercase"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus rerum assumenda facere
+            repellat quod,
+            consequuntur minima nesciunt illum impedit, ad possimus cumque suscipit et nostrum laborum inventore
+            eligendi,
+            culpa nihil! </p>
+        <button class="btn"> Apple Store </button> <img src="../../assets/fa-apple.png">
+        <button class="btn"> Play Store </button> <img src="../../assets/fa-android.png">
+    </div>
 </article>
